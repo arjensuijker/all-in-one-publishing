@@ -18,12 +18,18 @@ p:not(:first-of-type):not(.no-indent){
 }
 
 figure img{
-	width:100%;
+	width:100%;	
+}
+
+figure:not(.no-counter){
 	counter-increment: figures;
 }
 
-figure:before{
+figure:not(.no-counter):before{
 	content: counter(figures,upper-roman);
+}
+
+figure:before{
 	margin-left:-30px;
 	position:absolute;
 }
