@@ -1,19 +1,16 @@
 body{
-	font-family:'Helvetica', 'Arial', 'sans-serif';
-	max-width:500px;
-	margin:0px auto;
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
 	text-align:justify;
 	counter-reset: footnotes figures;
 }
 
 p{
-	margin-bottom:0.5em;
-	margin-top:0.5em;
+	margin-bottom:1em;
 	line-height:1.3em;
 }
 
 p:not(:first-of-type):not(.no-indent){
-	text-indent: -30px;
+	text-indent: -2em;
 }
 
 figure img{
@@ -29,12 +26,12 @@ figure:not(.no-counter):before{
 }
 
 figure:before{
-	margin-left:-30px;
+	margin-left:-2em;
 	position:absolute;
 }
 
 div.footnotes{
-	margin-left:-30px;
+	margin-left:-2em;
 	font-size:60%;
 	-webkit-column-count: 3;
 	-moz-column-count: 3;
@@ -86,10 +83,12 @@ h3{
 
 h3.introduction, h3.conclusion{
 	font-size: 90%;
+	font-weight:normal;
 }
 
 h4{
 	font-weight:bold;
+	margin:2em 0 0 0;
 }
 
 section.references h2, section.figures h2, section.colophon h2 {
@@ -100,51 +99,7 @@ section.references h2, section.figures h2, section.colophon h2 {
 
 section{
 	clear:both;
-	padding:50px 0px;
-}
-
-section header{
-	background:black;
-	width:94%;
-	color:white;
-	padding:3%;
-	height:150px;
-	counter-reset: footnotes;
-}
-
-section header h2:first-child{
-	width:64%;
-	float:left;
-	display:block;
-	text-align:left;
-}
-
-section header h2:nth-child(2){
-	width:32%;
-	float:right;
-	text-align:right;
-}
-
-section header h2:nth-child(3){
-	width:64%;
-	margin-top:100px;
-	text-align:left;
-}
-
-section.index ul li span.author{
-	font-size:200%;
-	font-weight: bold;
-}
-
-section.index ul li {
-	display:block;
-	float:left;
-	margin:0px;
-	padding:0px;
-}
-section.index ul li:nth-child(even) {
-	text-align:right;
-	float:right;
+	padding:1em 0px 2em 0px;
 }
 
 section.colophon .colophon_footer{
