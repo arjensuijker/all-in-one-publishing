@@ -3,8 +3,7 @@ body{
 	max-width:500px;
 	margin:0px auto;
 	text-align:justify;
-	counter-reset: figures;
-	counter-reset: footnotes;
+	counter-reset: footnotes figures;
 }
 
 p{
