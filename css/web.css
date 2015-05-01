@@ -1,0 +1,109 @@
+body{
+	max-width:500px;
+	margin:0px auto;
+}
+section header{
+	background:black;
+	text-align:right;
+	width:96%;
+	padding:2%;
+}
+
+.footnoteRef sup{
+	background:black;
+	color:white;
+	padding:0 2px;
+	text-indent: 0;
+	border-radius: 3px;
+}
+
+section header h2{
+	color:white;
+	line-height:120%;
+}
+section header h2.title{
+	font-size:110%;
+}
+section header h2.subtitle{
+	font-weight:normal;
+	font-size:90%;
+}
+section header h2.author{
+	font-weight:normal;
+	font-size:100%;
+	font-style:italic;
+}
+
+nav{
+	position:fixed;
+	top:0px;
+	width:300px;
+	margin-left:-375px;
+	padding:10px;
+	text-align:right;
+}
+
+nav .index ul li{
+	float:none;
+	display:block;
+}
+
+nav H1, nav .page-number{
+	display:none;
+}
+
+nav .author{
+	font-size:120%;
+	font-weight:bold;
+	color:black;
+	padding:3px;
+}
+
+nav .frontcover{
+	height:135px;
+	padding:0;
+}
+
+nav .frontcover img{
+	height:100%;
+	width:auto;
+}
+
+.tooltip {
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover {
+    color: #c00;
+    text-decoration: none;
+}
+
+.tooltip:hover:after {
+    background: #111;
+    background: rgba(0,0,0,.8);
+    border-radius: .5em;
+    bottom: 1.35em;
+    color: #fff;
+    content: attr(title);
+    display: block;
+    left: 1em;
+    padding: .3em 1em;
+    position: absolute;
+    text-shadow: 0 1px 0 #000;
+    white-space: nowrap;
+    z-index: 98;
+}
+
+.tooltip:hover:before {
+    border: solid;
+    border-color: #111 transparent;
+    border-color: rgba(0,0,0,.8) transparent;
+    border-width: .4em .4em 0 .4em;
+    bottom: 1em;
+    content: "";
+    display: block;
+    left: 2em;
+    position: absolute;
+    z-index: 99;
+}
