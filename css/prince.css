@@ -1,28 +1,79 @@
+@import url('style.css');
+
 body {
   counter-reset: chapternum 1;
   font-size: 11pt; /*will be used in the main content */
 }
 
-.index{
+section.index{
    page-break-before: always;
 }
 
-.index{font-size: 10pt;} /* trying to find a way to target different tags inside this div. issue: some css properties are changeable - for example, font-family and color - others are not - for example, font-size. (?!) */
-.index a{color: black; /*font-family: 'serif'; font-size: 8pt;*/}
-.index ul{position: absolute; bottom: 0;}
-/*.index ul li.page-number, .index ul li.author{font-size: 8pt; color: red;}*/ /* does not seem to work */
+section.index{
+	font-size: 10pt;
+	 /* trying to find a way to target different tags inside this div. issue: some css properties are changeable - for example, font-family and color - others are not - for example, font-size. (?!) */
+}
+	
+section.index ul{
+	position: absolute; 
+	bottom: 0;
+	left:-1.5cm;
+	width: 100%;
+}
+
+section.index ul li{
+	width: 5cm;
+	margin:0 !important;
+}
+
+section.index ul li:nth-child(3n) {
+	position: relative;
+	top: -1.8cm;
+	right: 0;
+}
+
+section.index ul li:nth-child(4n) {
+	position: relative;
+	top: -0.9cm;
+	right: -5cm;
+}
+
+section.index ul li a.author{
+	font-size:12pt !important;
+	color: black;
+}
+
+section.index ul li span.page-number{
+ 	content:'page ' target-counter(attr(href), page);
+}
 
 .essay {
   counter-increment: chapternum;
   page-break-before: always;
 }
 
-h2.title{string-set: doctitle content(); /* retrieves the content from h2.title - will be used later, in the page bottom*/ }
-.references{string-set: doctitle '';} /* clears the page bottom text (otherwise, the title of the last essay will be displayed */
+h2.title{
+	string-set: doctitle content(); 
+	/* retrieves the content from h2.title - will be used later, in the page bottom*/
+}
 
+.references{
+	string-set: doctitle '';
+	/* clears the page bottom text (otherwise, the title of the last essay will be displayed */
+} 
 
 h1, h2, h3, h4, h5 {
   page-break-after: avoid;
+}
+
+div.footnotes{
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+
+div.footnotes ol, ol li{
+	list-style-type: none !important;
 }
 
 table, figure {
