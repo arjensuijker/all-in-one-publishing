@@ -7,11 +7,11 @@ section.index ul li a.author{
 
 section.index ul li {
 	display:block;
-	float:left;
+	/*float:left;*/
 	margin:0px;
 	padding:0px;
 }
-section.index ul li:nth-child(even) {
+section.index ul li:nth-child(3n), section.index ul li:nth-child(4n) {
 	text-align:right;
 	float:right;
 }
