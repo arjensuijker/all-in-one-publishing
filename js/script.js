@@ -1,9 +1,10 @@
 $(function() {
     $('.footnoteRef').each(function(){
 		var number = $(this).find('sup').html();
-		var footnoteContent=$("#fn"+ number + " p").html();
+		var footnote = $(this).closest(".essay").find("#fn"+ number);
+		var footnoteContent=footnote.html();
 		console.log(footnoteContent);
-		$("#fn"+ number).remove();
+		footnote.remove();
 		$(this).append("<span class='footnote-tooltip'>"+footnoteContent+"</span>");
 	})	
 });
