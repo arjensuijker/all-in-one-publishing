@@ -17,6 +17,23 @@ section header{
 	border-radius: 3px;
 }
 
+a.footnoteRef .footnote-tooltip {
+  display:none;
+}
+
+a.footnoteRef .footnote-tooltip:hover {
+	display:block;
+  background:black;
+  color:white;
+  width:300px;
+  font-size:60%;
+  padding:5px;
+  text-indent:0;
+  box-shadow:3px 3px 3px grey;
+  left:0px;
+  
+}
+
 section header h2{
 	color:white;
 	line-height:120%;
