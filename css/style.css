@@ -13,6 +13,14 @@ sup{
 	font-size:60%;
 }
 
+ul{
+	margin-bottom:1em;
+}
+
+.clear{
+	clear:both;
+}
+
 table{
 	margin-left: -2em;
 	margin-top:1em;
@@ -140,4 +148,12 @@ section.colophon .colophon_footer{
 	column-count: 3;
   -webkit-column-count: 3;
     -moz-column-count: 3;
+}
+	
+.essay-link .number, .essay-link .title{
+	display:none;
+}
+
+button.toggle-menu{
+	display:none;
 }

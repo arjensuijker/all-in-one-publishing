@@ -37,8 +37,7 @@ a.footnoteRef:hover .footnote-tooltip {
   font-size:80%;
   padding:5px;
   text-indent:0;
-  box-shadow:3px 3px 3px #333;
-  
+	box-shadow:0px 2px 2px rgba(0,0,0,0.7);
 }
 
 section header h2{
@@ -58,41 +57,6 @@ section header h2.author{
 	font-style:italic;
 }
 
-nav{
-	position:fixed;
-	top:0px;
-	width:300px;
-	margin-left:-375px;
-	padding:10px;
-	text-align:right;
-}
-
-nav .index ul li{
-	float:none;
-	display:block;
-}
-
-nav H1, nav .page-number{
-	display:none;
-}
-
-nav .author{
-	font-size:120%;
-	font-weight:bold;
-	color:black;
-	padding:3px;
-}
-
-nav .frontcover{
-	height:135px;
-	padding:0;
-}
-
-nav .frontcover img{
-	height:100%;
-	width:auto;
-}
-
 .tooltip {
     display: inline;
     position: relative;
@@ -103,31 +67,139 @@ nav .frontcover img{
     text-decoration: none;
 }
 
-.tooltip:hover:after {
-    background: #111;
-    background: rgba(0,0,0,.8);
-    border-radius: .5em;
-    bottom: 1.35em;
-    color: #fff;
-    content: attr(title);
-    display: block;
-    left: 1em;
-    padding: .3em 1em;
-    position: absolute;
-    text-shadow: 0 1px 0 #000;
-    white-space: nowrap;
-    z-index: 98;
+.frontcover img{
+	width:100%;
+	height:auto;
 }
 
-.tooltip:hover:before {
-    border: solid;
-    border-color: #111 transparent;
-    border-color: rgba(0,0,0,.8) transparent;
-    border-width: .4em .4em 0 .4em;
-    bottom: 1em;
-    content: "";
-    display: block;
-    left: 2em;
-    position: absolute;
-    z-index: 99;
+.frontcover H1, .frontcover .page-number{
+	display:none;
+} 
+
+@media screen and (max-width:940px){
+	body{
+		width:100%;
+	}
+	section.chapter{
+		width:96%;	
+		margin-left:2%;
+	}	
+	nav.index{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:40px;
+		background:black;
+		box-shadow:0px 2px 2px rgba(0,0,0,0.7);
+	}
+	nav.index ul{
+		float:right;
+		margin:0;
+	}
+	nav.index ul li{
+		float:left;
+		margin:15px;
+		list-style:none;
+		padding:0;
+		line-height:1em;
+		display:block;
+	}
+	nav.index .essay-link {
+		color:white;
+	}
+	nav.index .essay-link :active{
+		color:yellow;
+	}
+	
+	nav.index .essay-link .author{
+		display:none;
+		font-weight:bold;
+	}
+	
+	nav.index .essay-link .number{
+		display:inline;
+		font-weight:bold;
+	}
+
+	nav.index .toggle-menu{
+		display:block;
+		height:30px;
+		width:30px;
+		position:absolute;
+		top:5px; left:5px;
+		background: url('../img/menu-icon.svg');
+		background-size:100% 100%;
+		border:none;
+	}	
+	
+	nav.index.open{
+		height:auto;
+		padding-top:40px;
+	}
+	nav.index.open ul, nav.index.open ul li{
+		float:none;
+		margin:5px;
+	}
+	
+	nav.index.open .essay-link .author, nav.index.open .essay-link .title{
+		display:inline;
+	}
+	
+	nav.index.open .essay-link .title{
+		font-size:80%;
+	}
+	a.footnoteRef:hover .footnote-tooltip{
+		position:fixed;
+		left:50%;
+		top:50%;
+		margin-left:-155px; 
+		width:300px;
+	}
+	
+	.essay{
+		padding-top: 40px; margin-top: -40px;
+	}
+	
+}
+
+@media screen and (min-width:600px){
+	
+	nav.index .essay-link .author{
+		display:inline;
+	}
+	
+	nav.index .essay-link .number{
+		display:none;
+	}
+	
+}
+
+@media screen and (min-width:941px){
+	.frontcover{
+		position:fixed;
+		top:0px;
+		width:300px;
+		margin-left:-375px;
+		padding:10px;
+		text-align:right;
+	}
+
+	.frontcover .index ul li{
+		float:none;
+		display:block;
+	}
+
+	.frontcover .essay-link .author{
+		font-size:120%;
+		font-weight:bold;
+		color:black;
+		padding:3px;
+	}
+
+	.frontcover img{
+		width:100px;
+		padding:0;
+		float:right;
+	}
 }
