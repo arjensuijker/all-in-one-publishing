@@ -149,16 +149,20 @@ section header h2.author{
 	nav.index.open .essay-link .title{
 		font-size:80%;
 	}
+	
+	.essay{
+		padding-top: 40px; margin-top: -40px;
+	}
+	
+}
+
+@media screen and (max-width:650px){
 	a.footnoteRef:hover .footnote-tooltip{
 		position:fixed;
 		left:50%;
 		top:50%;
 		margin-left:-155px; 
 		width:300px;
-	}
-	
-	.essay{
-		padding-top: 40px; margin-top: -40px;
 	}
 	
 }
