@@ -6,10 +6,5 @@ $(function() {
 		footnote.remove();
 		$(this).append("<span class='footnote-tooltip'>"+footnoteContent+"</span>");
 	})	
-	
 	$('.footnotes').hide();
-	
-	$('.toggle-menu').hover(function(){
-		$('nav.index').toggleClass('open');
-	})
 });
