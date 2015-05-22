@@ -15,46 +15,49 @@ ul li{
 	column-count: 3 !important;
 }*/
 
-section.index{
-   page-break-before: always;
+.frontcover h1{
+	page-break-before: always;
+	font-size: 16pt !important;
 }
 
-section.index{
+nav.index{
 	font-size: 10pt;
 	 /* trying to find a way to target different tags inside this div. issue: some css properties are changeable - for example, font-family and color - others are not - for example, font-size. (?!) */
 }
 	
-section.index ul{
+nav.index ul{
 	position: absolute; 
 	bottom: 0;
 	left:-1.5cm;
 	width: 100%;
 }
 
-section.index ul li{
+nav.index ul li{
 	width: 5cm;
-	margin:0 !important;
+	margin: .3cm 0 0 0 !important;
 }
 
-section.index ul li:nth-child(3n) {
+nav.index ul li:nth-child(3n) {
 	position: relative;
-	top: -1.8cm;
+	top: -2.8cm;
 	right: 0;
 }
 
-section.index ul li:nth-child(4n) {
+nav.index ul li:nth-child(4n) {
 	position: relative;
-	top: -0.9cm;
+	top: -1.4cm;
 	right: -5cm;
 }
 
-section.index ul li a.author{
-	font-size:12pt !important;
-	color: black;
+nav.index ul li a span, nav.index ul li a.author{
+	font-size:16pt !important;
+	font-weight: bold;
+	color: black !important;
 }
 
-section.index ul li span.page-number{
+nav.index ul li a.page-number{
  	content:'page ' target-counter(attr(href), page);
+ 	color: black !important;
 }
 
 .essay {
@@ -208,10 +211,14 @@ table{
 
 @page essay:first{
 	
+	background-color: black !important;
+	
 	@bottom-right{
-		background-color: green;	
+		/*background-color: green;	*/ /* uncomment to verify that the essay title/page number are no longer being printed at the bottom */
+		content: ''; /* removes page number and essay title */
 	}
 	@bottom-left{
-		background-color: green;	
+		/*background-color: green;	*/ 
+		content: ''; 
 	}
 }
