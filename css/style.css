@@ -1,7 +1,9 @@
 body{
-	font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+	font-family: 'News Cycle', 'Helvetica', 'Arial', 'sans-serif';
 	text-align:justify;
 	counter-reset: footnotes figures;
+	font-weight:bold;
+	font-size:106%;
 }
 
 a{
@@ -9,6 +11,7 @@ a{
 }
 
 sup{
+	line-height:1em;
 	vertical-align: super;
 	font-size:60%;
 }
