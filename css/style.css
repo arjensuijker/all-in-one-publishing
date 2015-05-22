@@ -1,5 +1,5 @@
 body{
-	font-family: 'Helvetica', 'Arial', 'sans-serif';
+	font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
 	text-align:justify;
 	counter-reset: footnotes figures;
 }
@@ -95,13 +95,13 @@ strong{
 }
 
 ul li{
-    list-style: square outside url("../img/cross.svg");
+   list-style: square outside url("../img/cross.svg");
 	margin-left:-1em;
 	padding-left:1em;
 }
 
 ol li{
-    list-style: upper-roman outside;
+   list-style: upper-roman outside;
 	margin-left:-1em;
 	padding-left:1em;
 }
@@ -150,8 +150,8 @@ section{
 section.colophon .colophon_footer{
 	font-size:70%;
 	column-count: 3;
-  -webkit-column-count: 3;
-    -moz-column-count: 3;
+   -webkit-column-count: 3;
+   -moz-column-count: 3;
 }
 	
 .essay-link .number, .essay-link .title{

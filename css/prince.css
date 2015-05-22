@@ -2,8 +2,18 @@
 
 body {
   counter-reset: chapternum 1;
-  font-size: 11pt; /*will be used in the main content */
+  font-size: 10pt; /*will be used in the main content */
 }
+
+ul li{
+	width: 10cm;
+	margin-left: -1.5cm !important;
+	padding-left: 0 !important;
+}
+
+/*section.colophon .colophon_footer{
+	column-count: 3 !important;
+}*/
 
 section.index{
    page-break-before: always;
@@ -66,18 +76,34 @@ h1, h2, h3, h4, h5 {
   page-break-after: avoid;
 }
 
+p{
+	margin-top: 0.1em;
+	margin-bottom: 0.1em !important;
+	line-height: 1.1em !important;
+}
+
 div.footnotes{
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
+	column-count: 3;
+	column-width: 2.6cm;
 }
 
 div.footnotes ol, ol li{
 	list-style-type: none !important;
+	margin-left:0;
+	padding-left:1em;
+	word-wrap: break-word; /*to wrap long URL's */
+}
+
+.footnoteRef sup{
+	line-height: 1.1em;
 }
 
 table, figure {
   page-break-inside: avoid;
+}
+
+table{
+	border-collapse: collapse;
 }
 
 /*sup{
