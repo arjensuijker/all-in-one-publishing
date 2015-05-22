@@ -150,8 +150,40 @@ section header h2.author{
 		font-size:80%;
 	}
 	
+	p{
+		text-indent:0 !important;
+	}
+	
 	.essay{
 		padding-top: 40px; margin-top: -40px;
+	}
+	
+
+	figure:before{
+		display:none;		
+	}
+
+	figure:not(.no-counter):after{
+		content: "Figure " counter(figures,upper-roman);
+		position:absolute;
+		font-size:80%;
+		font-weight:bold;
+	}
+
+	div.footnotes, table{
+		margin-left:0;
+	}
+
+	ul li{
+		list-style: square outside url("../img/cross.svg");
+		margin-left:1em;
+		padding-left:0em;
+	}
+
+	ol li{
+		list-style: upper-roman outside;
+		margin-left:1em;
+		padding-left:0em;
 	}
 	
 }
