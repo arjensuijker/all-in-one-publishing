@@ -1,27 +1,55 @@
-nav.index ul li a.author{
-	font-size:200%;
-	font-weight: bold;
+/* for this, we assume that people print on a4 */
+
+body {
+  font-size: 12pt; /*will be used in the main content */
+}
+
+.frontcover h1{
+	page-break-before: always;
+	font-size: 16pt !important;
+}
+
+nav.index{
+	font-size: 10pt;
+	 /* trying to find a way to target different tags inside this div. issue: some css properties are changeable - for example, font-family and color - others are not - for example, font-size. (?!) */
+}
+
+nav.index ul li a{
+	color:black;
 }
 
 nav.index ul li {
-	display:block;
-	/*float:left;*/
-	margin:0px;
-	padding:0px;
-}
-nav.index ul li:nth-child(3n), nav.index ul li:nth-child(4n) {
-	text-align:right;
-	float:right;
+	list-style:none;
 }
 
+nav.index .essay-link .number {
+	display:block;
+}
+
+nav.index ul li a.page-number{
+ 	content:'page ' target-counter(attr(href), page);
+ 	color: black !important;
+}
+
+.essay {
+  counter-increment: chapternum;
+  page-break-before: always;
+}
+
+h2.title{
+	string-set: doctitle content(); 
+	/* retrieves the content from h2.title - will be used later, in the page bottom*/
+}
+
+.references{
+	string-set: doctitle '';
+	/* clears the page bottom text (otherwise, the title of the last essay will be displayed */
+} 
+
 section header{
-	background:black;
-	color:white;
-	width:94%;
-	padding:3%;
-	height:150px;
-	counter-reset: footnotes;
+	height: 6.5in !important;
 	line-height: 2em;
+	width: 100% !important;
 	position: relative;
 }
 
@@ -33,6 +61,7 @@ section header h2.title, section header h2.author{
 
 section header h2.title{
 	width: 75% !important;
+	text-align: left;
 	left: 0;
 }
 
@@ -43,6 +72,7 @@ section header h2.author{;
 }
 
 section header h2.subtitle{
+	text-align: left;
 	display: block;
 	position: absolute;
 	left: 0;
@@ -50,21 +80,116 @@ section header h2.subtitle{
 	bottom: 0;
 }
 
-/*section header h2:first-child{
-	width:64%;
-	float:left;
-	display:block;
-	text-align:left;
+h1, h2, h3, h4, h5 {
+  page-break-after: avoid;
 }
 
-section header h2:nth-child(2){
-	width:32%;
-	float:right;
-	text-align:right;
+p{
+	margin-top: 0.1em;
+	margin-bottom: 0.1em !important;
+	line-height: 1.1em !important;
 }
 
-section header h2:nth-child(3){
-	width:64%;
-	margin-top:3em;
-	text-align:left;
-}*/
+div.footnotes{
+	margin-top: 1cm;
+	column-count: 3;
+	column-width: 2.6cm;
+}
+
+div.footnotes ol, ol li{
+	list-style-type: none !important;
+	margin-left:0;
+	padding-left:1em;
+	word-wrap: break-word; /*to wrap long URL's */
+}
+
+.footnoteRef sup{
+	line-height: 1.1em;
+}
+
+table, figure {
+  page-break-inside: avoid;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+/*sup{
+  vertical-align: super;
+  line-height: none;
+}*/ /* not working */
+
+.frontcover { 
+  page: cover; 
+  width: 100%;
+  height: 100%; 
+}
+
+@page {
+  size: 5.5in 8.5in;
+  /*half US Letter - will use cm in the rest of the file though*/
+  counter-increment: page;
+  font-family: sans-serif; /* will be used in the page bottom */
+}
+
+@page :left {
+  margin-left: 2.3cm;
+  margin-right: 1.25cm;
+  font-size: 9pt;
+  
+ @bottom-right{
+    margin: 0;
+    /* font-family: inherit; */ /* does not work */
+    content: string(doctitle);      
+  }
+  @bottom-left{
+  	margin: 0;
+  	content: counter(page); 
+  }  
+  
+}
+
+@page :right {
+  margin-left: 2.0cm;
+  margin-right: 2.00cm;
+  font-size: 9pt; 
+  
+  @bottom-left{
+    margin: 0;
+    content: string(doctitle);  
+    
+  }
+  @bottom-right{
+  	margin: 0;
+  	content: counter(page);  
+  }
+  
+}
+
+@page :first {
+	
+   @bottom-right{
+  	margin: 0;
+  	content: '';  
+   }
+}
+
+.essay {
+    page: essay;
+    prince-page-group: start;
+}
+
+@page essay:first{
+	
+	background-color: black !important;
+	
+	@bottom-right{
+		/*background-color: green;	*/ /* uncomment to verify that the essay title/page number are no longer being printed at the bottom */
+		content: ''; /* removes page number and essay title */
+	}
+	@bottom-left{
+		/*background-color: green;	*/ 
+		content: ''; 
+	}
+}

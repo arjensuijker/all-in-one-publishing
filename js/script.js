@@ -1,10 +1,20 @@
 $(function() {
-    $('.footnoteRef').each(function(){
+	$('.footnoteRef').each(function(){
 		var number = $(this).find('sup').html();
 		var footnote = $(this).closest(".essay").find("#fn"+ number);
 		var footnoteContent=footnote.html();
-		footnote.remove();
 		$(this).append("<span class='footnote-tooltip'>"+footnoteContent+"</span>");
 	})	
-	$('.footnotes').hide();
+	$('.footnotes').hide();    
+});
+
+var mediaQueryList = window.matchMedia(' print ');
+mediaQueryList.addListener(function(mql) {
+    if (mql.matches) {
+		$('.footnotes').show();
+		$('.footnote-tooltip').hide();
+    }else{
+		$('.footnotes').hide(); 
+		$('.footnote-tooltip').show();		
+	}
 });

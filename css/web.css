@@ -223,13 +223,12 @@ section header h2.author{
 		font-weight:bold;
 		color:black;
 		padding:3px;
-		line-height:1.2em;
 	}
 
 	.frontcover .essay-link .title{
 		color:black;
 		position:relative;
-		top:-0.6em;
+		top:-0.4em;
 		display:none;
 		font-size:70%;
 	}
