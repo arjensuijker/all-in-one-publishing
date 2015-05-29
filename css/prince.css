@@ -1,16 +1,6 @@
 @import url('style.css');
 @import url('print.css');
 
-body {
-  font-size: 10pt; /*will be used in the main content */
-}
-
-ul li{
-	width: 10cm;
-	margin-left: -1.5cm !important;
-	padding-left: 0 !important;
-}
-
 /*section.colophon .colophon_footer{
 	column-count: 3 !important;
 }*/
@@ -59,4 +49,109 @@ nav.index ul li a span, nav.index ul li a.author{
 
 section header h2.title, section header h2.author, section header h2.subtitle{
 	color: white !important;
+}
+
+section h3{font-size: 120%;}
+section h4{font-size: 108%;}
+
+.footnoteRef sup, sup{line-height: 0.15em !important;}
+
+ul li, section.figures ol li{
+	width: 10cm;
+	margin-left: -1.5cm !important;
+	padding-left: 0.3em !important;
+}
+@page {
+  size: 5.5in 8.5in;
+  /*half US Letter - will use cm in the rest of the file though*/
+  counter-increment: page;
+  font-family: sans-serif; /* will be used in the page bottom */
+}
+
+@page :left {
+  margin-left: 2.3cm;
+  margin-right: 1.25cm;
+  font-size: 9pt;
+  
+ @bottom-right{
+    margin: 0;
+    /* font-family: inherit; */ /* does not work */
+    content: string(doctitle);      
+  }
+  @bottom-left{
+  	margin: 0;
+  	content: counter(page); 
+  }  
+  
+}
+
+@page :right {
+  margin-left: 2.0cm;
+  margin-right: 2.00cm;
+  font-size: 9pt; 
+  
+  @bottom-left{
+    margin: 0;
+    content: string(doctitle);  
+    
+  }
+  @bottom-right{
+  	margin: 0;
+  	content: counter(page);  
+  }
+  
+}
+
+@page :first {
+	
+   @bottom-right{
+  	margin: 0;
+  	content: '';  
+   }
+}
+
+@page abstract{
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
+	@bottom-left{
+		content: ''; 
+	}
+}
+
+@page black{
+	
+	background-color: black !important;
+	
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
+	@bottom-left{
+		content: ''; 
+	}
+}
+
+
+@page essay:first{
+	
+	background-color: black !important;
+	
+	@bottom-right{
+		/*background-color: green;	*/ /* uncomment to verify that the essay title/page number are no longer being printed at the bottom */
+		content: ''; /* removes page number and essay title */
+	}
+	@bottom-left{
+		/*background-color: green;	*/ 
+		content: ''; 
+	}
+}
+
+@page empty{
+	
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
+	@bottom-left{
+		content: ''; 
+	}
 }
