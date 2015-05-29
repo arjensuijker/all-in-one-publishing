@@ -27,20 +27,36 @@ nav.index ul li{
 	margin: .3cm 0 0 0 !important;
 }
 
+nav.index ul li:nth-child(1n) {
+	position: relative;
+	top: 2cm;
+}
+
+nav.index ul li:nth-child(2n) {
+	position: relative;
+	top: 3cm;
+}
+
 nav.index ul li:nth-child(3n) {
 	position: relative;
-	top: -2.8cm;
-	right: 0;
+	top: -2.2cm;
+	right: -5cm;
+	text-align: right;
 }
 
 nav.index ul li:nth-child(4n) {
 	position: relative;
-	top: -1.4cm;
+	top: -1.2cm;
 	right: -5cm;
+	text-align: right;
 }
 
 nav.index ul li a span, nav.index ul li a.author{
 	font-size:16pt !important;
 	font-weight: bold;
 	color: black !important;
+}
+
+section header h2.title, section header h2.author, section header h2.subtitle{
+	color: white !important;
 }
