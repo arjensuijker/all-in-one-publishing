@@ -109,6 +109,8 @@ ol li{
 	padding-left:1em;
 }
 
+ol.numbered li{ list-style: decimal !important;}
+
 h1{
 	font-size: 200%;
 	font-weight: bold;
