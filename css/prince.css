@@ -5,11 +5,7 @@ body {
   font-size: 10pt; /*will be used in the main content */
 }
 
-ul li{
-	width: 10cm;
-	margin-left: -1.5cm !important;
-	padding-left: 0 !important;
-}
+a{color: black !important;}
 
 /*section.colophon .colophon_footer{
 	column-count: 3 !important;
@@ -59,4 +55,39 @@ nav.index ul li a span, nav.index ul li a.author{
 
 section header h2.title, section header h2.author, section header h2.subtitle{
 	color: white !important;
+}
+
+section h3{font-size: 120%;}
+section h4{font-size: 108%;}
+
+.footnoteRef sup, sup{line-height: 0.15em !important;}
+
+ul li, section.figures ol li{
+	width: 10cm;
+	margin-left: -1.5cm !important;
+	padding-left: 0.3em !important;
+}
+
+section.figures ol li{
+	list-style-type: upper-roman !important;
+}
+
+ol.numbered li{
+	width: 10cm;
+	margin-left: -1.5cm !important;
+	padding-left: 0.3em !important;
+}
+
+section.colophon{page-break-before: always;}
+
+section.colophon p{margin-top: .3cm !important;}
+
+div.colophon_footer{
+	text-align: left;
+	page-break-before: always;
+	page-break-after: always;
+}
+
+div.colophon_footer img{
+	margin: .15cm 0;
 }

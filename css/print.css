@@ -31,9 +31,10 @@ nav.index ul li a.page-number{
  	color: black !important;
 }
 
-.essay {
+section.essay {
   counter-increment: chapternum;
-  page-break-before: always;
+  /*page-break-before: always;
+  page-break-after: always;*/
 }
 
 h2.title{
@@ -103,6 +104,10 @@ div.footnotes ol, ol li{
 	word-wrap: break-word; /*to wrap long URL's */
 }
 
+ol.numbered li{
+	list-style-type: decimal !important;
+}
+
 .footnoteRef sup{
 	line-height: 1.1em;
 }
@@ -119,6 +124,30 @@ table{
   vertical-align: super;
   line-height: none;
 }*/ /* not working */
+
+.abstract{
+	page:abstract;
+	/*page-break-before: always;*/
+}
+
+.black{
+	page:black;
+	width: 100%;
+   height: 100%; 
+	display: block;
+}
+
+.blank{
+	page:empty;
+	width: 100%;
+   height: 100%; 
+	display: block;
+}
+
+.essay {
+    page: essay;
+    prince-page-group: start;
+}
 
 .frontcover { 
   page: cover; 
@@ -175,10 +204,27 @@ table{
    }
 }
 
-.essay {
-    page: essay;
-    prince-page-group: start;
+@page abstract{
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
+	@bottom-left{
+		content: ''; 
+	}
 }
+
+@page black{
+	
+	background-color: black !important;
+	
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
+	@bottom-left{
+		content: ''; 
+	}
+}
+
 
 @page essay:first{
 	
@@ -190,6 +236,16 @@ table{
 	}
 	@bottom-left{
 		/*background-color: green;	*/ 
+		content: ''; 
+	}
+}
+
+@page empty{
+	
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
+	@bottom-left{
 		content: ''; 
 	}
 }
