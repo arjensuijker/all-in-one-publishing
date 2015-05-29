@@ -1,8 +1,11 @@
 /* for this, we assume that people print on a4 */
 
+
 body {
-  font-size: 12pt; /*will be used in the main content */
+  font-size: 10pt; /*will be used in the main content */
 }
+
+a{color: black !important;}
 
 .frontcover h1{
 	page-break-before: always;
@@ -155,97 +158,26 @@ table{
   height: 100%; 
 }
 
-@page {
-  size: 5.5in 8.5in;
-  /*half US Letter - will use cm in the rest of the file though*/
-  counter-increment: page;
-  font-family: sans-serif; /* will be used in the page bottom */
+section.figures ol li{
+	list-style-type: upper-roman !important;
 }
 
-@page :left {
-  margin-left: 2.3cm;
-  margin-right: 1.25cm;
-  font-size: 9pt;
-  
- @bottom-right{
-    margin: 0;
-    /* font-family: inherit; */ /* does not work */
-    content: string(doctitle);      
-  }
-  @bottom-left{
-  	margin: 0;
-  	content: counter(page); 
-  }  
-  
+ol.numbered li{
+	width: 10cm;
+	margin-left: -1.5cm !important;
+	padding-left: 0.3em !important;
 }
 
-@page :right {
-  margin-left: 2.0cm;
-  margin-right: 2.00cm;
-  font-size: 9pt; 
-  
-  @bottom-left{
-    margin: 0;
-    content: string(doctitle);  
-    
-  }
-  @bottom-right{
-  	margin: 0;
-  	content: counter(page);  
-  }
-  
+section.colophon{page-break-before: always;}
+
+section.colophon p{margin-top: .3cm !important;}
+
+div.colophon_footer{
+	text-align: left;
+	page-break-before: always;
+	page-break-after: always;
 }
 
-@page :first {
-	
-   @bottom-right{
-  	margin: 0;
-  	content: '';  
-   }
-}
-
-@page abstract{
-	@bottom-right{
-		content: ''; /* removes page number  */
-	}
-	@bottom-left{
-		content: ''; 
-	}
-}
-
-@page black{
-	
-	background-color: black !important;
-	
-	@bottom-right{
-		content: ''; /* removes page number  */
-	}
-	@bottom-left{
-		content: ''; 
-	}
-}
-
-
-@page essay:first{
-	
-	background-color: black !important;
-	
-	@bottom-right{
-		/*background-color: green;	*/ /* uncomment to verify that the essay title/page number are no longer being printed at the bottom */
-		content: ''; /* removes page number and essay title */
-	}
-	@bottom-left{
-		/*background-color: green;	*/ 
-		content: ''; 
-	}
-}
-
-@page empty{
-	
-	@bottom-right{
-		content: ''; /* removes page number  */
-	}
-	@bottom-left{
-		content: ''; 
-	}
+div.colophon_footer img{
+	margin: .15cm 0;
 }
