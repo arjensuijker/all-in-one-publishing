@@ -10,6 +10,7 @@ $(function() {
 
 var mediaQueryList = window.matchMedia(' print ');
 mediaQueryList.addListener(function(mql) {
+	console.log('print');
     if (mql.matches) {
 		$('.footnotes').show();
 		$('.footnote-tooltip').hide();

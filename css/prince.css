@@ -47,6 +47,15 @@ nav.index ul li a span, nav.index ul li a.author{
 	color: black !important;
 }
 
+section header{
+	height: 6.5in !important;
+	margin-bottom:0 !important;
+}
+
+section header h2.subtitle{
+	bottom:0 !important;
+}
+
 section header h2.title, section header h2.author, section header h2.subtitle{
 	color: white !important;
 }

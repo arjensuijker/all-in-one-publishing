@@ -58,6 +58,10 @@ p:not(:first-of-type):not(.no-indent){
 	text-indent: -2em;
 }
 
+figure{
+	position:relative;
+}
+
 figure img{
 	width:100%;	
 }
