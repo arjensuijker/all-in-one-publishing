@@ -5,10 +5,12 @@
 	column-count: 3 !important;
 }*/
 	
+body{margin: 0 !important;}
+	
 nav.index ul{
 	position: absolute; 
 	bottom: 0;
-	left:-1.5cm;
+	left:-.5cm;
 	width: 100%;
 }
 
@@ -29,14 +31,14 @@ nav.index ul li:nth-child(2n) {
 
 nav.index ul li:nth-child(3n) {
 	position: relative;
-	top: -2.2cm;
+	top: -1.6cm;
 	right: -5cm;
 	text-align: right;
 }
 
 nav.index ul li:nth-child(4n) {
 	position: relative;
-	top: -1.2cm;
+	top: -0.6cm;
 	right: -5cm;
 	text-align: right;
 }
@@ -54,6 +56,7 @@ section header{
 
 section header h2.subtitle{
 	bottom:0 !important;
+	margin-top: 6in !important; /* hack solution, bottom did not seem to be working */
 }
 
 section header h2.title, section header h2.author, section header h2.subtitle{
@@ -65,16 +68,26 @@ section h4{font-size: 108%;}
 
 .footnoteRef sup, sup{line-height: 0.15em !important;}
 
-ul li, section.figures ol li{
+ul li, ol.numbered li{
 	width: 10cm;
-	margin-left: -1.5cm !important;
-	padding-left: 0.3em !important;
+	margin-left: -0.35cm !important;
 }
 
+section.figures ol li{
+	width: 10cm;
+	/*margin-left: -1.5cm !important;
+	padding-left: 0.3em !important;*/
+}
+
+<<<<<<< HEAD
 ol.numbered li{
 	width: 10cm;
 	margin-left: -1.5cm !important;
 	padding-left: 0.3em !important;
+=======
+section.frontcover h1{
+page-break-before: always;
+>>>>>>> e2e1c5884cd2ee865f323a081140ca761da53ec8
 }
 
 @page {
@@ -145,6 +158,7 @@ ol.numbered li{
 	@bottom-left{
 		content: ''; 
 	}
+
 }
 
 
