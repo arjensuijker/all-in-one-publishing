@@ -49,6 +49,10 @@ nav.index ul li a span, nav.index ul li a.author{
 	color: black !important;
 }
 
+nav.index .essay-link .number {
+	visibility: hidden;
+}
+
 section header{
 	height: 6.5in !important;
 	margin-bottom:0 !important;
