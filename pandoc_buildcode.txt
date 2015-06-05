@@ -1,2 +1,2 @@
 type "css\style.css" "css\print.css" > "css\epub.css"
-pandoc container.html -o book.epub --epub-stylesheet=css\epub.css
+pandoc container.html -o book.epub --epub-cover-image=img\cover.jpg --epub-stylesheet=css\epub.css

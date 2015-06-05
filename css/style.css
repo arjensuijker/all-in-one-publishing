@@ -1,5 +1,5 @@
 body{
-	font-family: 'News Cycle', 'Helvetica', 'Arial', 'sans-serif';
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	text-align:justify;
 	counter-reset: footnotes figures;
 	font-weight:bold;
@@ -56,6 +56,10 @@ p{
 
 p:not(:first-of-type):not(.no-indent){
 	text-indent: -2em;
+}
+
+figure{
+	position:relative;
 }
 
 figure img{
