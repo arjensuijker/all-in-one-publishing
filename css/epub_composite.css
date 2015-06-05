@@ -169,13 +169,21 @@ section.colophon .colophon_footer{
 	
 .essay-link .number, .essay-link .title{
 	display:none;
+}
+body {
+  font-size: 16pt; 
+	font-weight:normal;
+	margin:10mm;
 }/* for this print stylesheet, we assume that most people print on a4 */
 
+
 body {
-  font-size: 12pt; 
+  font-size: 10pt; /*will be used in the main content */ 
 	font-weight:normal;
 	margin:30mm;
 }
+a{color: black !important;}
+
 a{color: black !important;}
 
 .frontcover h1{
@@ -215,7 +223,8 @@ nav.index ul li a.page-number{
 
 section.essay {
   counter-increment: chapternum;
-  page-break-before: always;
+  /*page-break-before: always;
+  page-break-after: always;*/
 }
 
 h2.title{
@@ -268,7 +277,6 @@ section header h2.subtitle{
 }
 
 h1, h2, h3, h4, h5 {
-  page-break-after: avoid;
 }
 
 p{
@@ -365,9 +373,4 @@ div.colophon_footer{
 
 div.colophon_footer img{
 	margin: .15cm 0;
-}
-body {
-  font-size: 16pt; 
-	font-weight:normal;
-	margin:10mm;
 }

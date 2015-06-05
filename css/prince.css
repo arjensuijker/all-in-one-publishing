@@ -78,16 +78,15 @@ section.figures ol li{
 	/*margin-left: -1.5cm !important;
 	padding-left: 0.3em !important;*/
 }
+	
+section.frontcover h1{
+page-break-before: always;
+}
 
-<<<<<<< HEAD
 ol.numbered li{
 	width: 10cm;
 	margin-left: -1.5cm !important;
 	padding-left: 0.3em !important;
-=======
-section.frontcover h1{
-page-break-before: always;
->>>>>>> e2e1c5884cd2ee865f323a081140ca761da53ec8
 }
 
 @page {
@@ -152,13 +151,13 @@ page-break-before: always;
 	
 	background-color: black !important;
 	
-	@bottom-right{
-		content: ''; /* removes page number  */
-	}
 	@bottom-left{
 		content: ''; 
 	}
 
+	@bottom-right{
+		content: ''; /* removes page number  */
+	}
 }
 
 
