@@ -72,7 +72,7 @@ section h4{font-size: 108%;}
 
 .footnoteRef sup, sup{line-height: 0.15em !important;}
 
-ul li, ol.numbered li{
+ul li{
 	width: 10cm;
 	margin-left: -0.35cm !important;
 }
@@ -84,12 +84,12 @@ section.figures ol li{
 }
 	
 section.frontcover h1{
-page-break-before: always;
+	page-break-before: always;
 }
 
 ol.numbered li{
 	width: 10cm;
-	margin-left: -1.5cm !important;
+	margin-left: -0.15cm !important;
 	padding-left: 0.3em !important;
 }
 

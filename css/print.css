@@ -41,7 +41,7 @@ nav.index .essay-link .number {
 }
 
 nav.index ul li a.page-number{
- 	content:'page ' target-counter(attr(href), page);
+ 	content:'page ' target-counter(attr(href), page); /* retrieves the page numbers to be displayed in the index */
  	color: black !important;
 }
 
