@@ -70,6 +70,13 @@ ul li, section.figures ol li{
 	margin-left: -1.5cm !important;
 	padding-left: 0.3em !important;
 }
+
+ol.numbered li{
+	width: 10cm;
+	margin-left: -1.5cm !important;
+	padding-left: 0.3em !important;
+}
+
 @page {
   size: 5.5in 8.5in;
   /*half US Letter - will use cm in the rest of the file though*/

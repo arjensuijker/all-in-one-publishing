@@ -1,4 +1,175 @@
-/* for this print stylesheet, we assume that most people print on a4 */
+body{
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	text-align:justify;
+	counter-reset: footnotes figures;
+	font-weight:bold;
+	font-size:106%;
+}
+
+a{
+	text-decoration:none;
+}
+
+sup{
+	line-height:1em;
+	vertical-align: super;
+	font-size:60%;
+}
+
+ul, ol, figure{
+	margin-bottom:2em;
+}
+
+.clear{
+	clear:both;
+}
+
+figcaption{
+	font-size:80%;
+	font-style:italic;
+}
+
+table{
+	margin-top:1em;
+	margin-bottom:1em;
+	font-size:70%;
+}
+th + th{
+	border-left:1px solid black;
+}
+td{
+	background:black;
+	color:white;
+	border-top:1px solid black;
+}
+td + td{
+	border:1px solid grey;
+}
+th, td:first-child{
+	background:#bbb;
+	color:black
+}
+td, th{
+	padding:0.7em;
+}
+p{
+	margin-bottom:1em;
+	line-height:1.3em;
+}
+
+p:not(:first-of-type):not(.no-indent){
+	text-indent: -2em;
+}
+
+figure{
+	position:relative;
+}
+
+figure img{
+	width:100%;	
+}
+
+figure:not(.no-counter){
+	counter-increment: figures;
+}
+
+figure:not(.no-counter):before{
+	content: counter(figures,upper-roman);
+}
+
+figure:before{
+	margin-left:-2em;
+	position:absolute;
+}
+
+div.footnotes{
+	margin-left:-2em;
+	font-size:60%;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+
+div.footnotes ol{
+	list-style-type: none !important;
+	list-style: none !important;
+}
+
+div.footnotes ol li:before{
+  font-weight:bold;
+	counter-increment: footnotes;
+	content:counter(footnotes) "  ";
+}
+
+strong{
+	font-weight:bold;
+}
+
+ul li{
+   list-style: square outside url("../img/cross.svg");
+	margin-left:-1em;
+	padding-left:1em;
+}
+
+ol li{
+   list-style: upper-roman outside;
+	margin-left:-1em;
+	padding-left:1em;
+}
+
+ol.numbered li{ list-style: decimal !important;}
+
+h1{
+	font-size: 200%;
+	font-weight: bold;
+	padding-bottom:10px;
+}
+
+h2{
+	font-size: 130%;
+	font-weight: bold;
+}
+
+h3{
+	font-weight:bold;
+	font-size: 120%;
+}
+
+h3.introduction, h3.conclusion{
+	font-size: 90%;
+	font-weight:normal;
+}
+
+h4{
+	font-weight:bold;
+	margin:1em 0 0 0;
+}
+
+h5{
+	text-decoration:underline;
+}
+
+section.references h2, section.figures h2, section.colophon h2 {
+	font-size: 100%;
+	font-weight: bold;
+	margin-left:30px;
+}
+
+section{
+	clear:both;
+	padding:1em 0px 2em 0px;
+}
+
+section.colophon .colophon_footer{
+	font-size:70%;
+	column-count: 3;
+   -webkit-column-count: 3;
+   -moz-column-count: 3;
+}
+	
+.essay-link .number, .essay-link .title{
+	display:none;
+}/* for this print stylesheet, we assume that most people print on a4 */
 
 body {
   font-size: 12pt; 
@@ -194,4 +365,9 @@ div.colophon_footer{
 
 div.colophon_footer img{
 	margin: .15cm 0;
+}
+body {
+  font-size: 16pt; 
+	font-weight:normal;
+	margin:10mm;
 }
