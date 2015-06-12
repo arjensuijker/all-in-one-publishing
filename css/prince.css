@@ -5,7 +5,10 @@
 	column-count: 3 !important;
 }*/
 	
-body{margin: 0 !important;}
+body{
+	margin: 0 !important;
+	font-size:10pt;
+}
 	
 
 
