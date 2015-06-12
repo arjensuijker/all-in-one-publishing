@@ -76,6 +76,14 @@ section header h2.author{
 	display:none;
 } 
 
+.footnotes{
+	display:none;
+}
+
+.footnote-tooltip{
+	display:block;
+}
+
 @media screen and (max-width:940px){
 	body{
 		width:100%;
