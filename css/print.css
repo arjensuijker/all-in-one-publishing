@@ -127,6 +127,8 @@ div.footnotes ol, ol li{
 	word-wrap: break-word; /*to wrap long URL's */
 }
 
+div.footnotes ol li{ font-size: 1.2em !important; }
+
 ol.numbered li{
 	list-style-type: decimal !important;
 }
@@ -179,6 +181,10 @@ table{
   page: cover; 
   width: 100%;
   height: 100%; 
+}
+
+.frontcover img{
+  margin-top: 1.7cm; /* does not make sense, should be 3.9cm... was defined by trial and error! :/  */
 }
 
 section.figures ol li{

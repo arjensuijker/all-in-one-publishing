@@ -72,6 +72,7 @@ section h4{font-size: 108%;}
 
 .footnoteRef sup, sup{line-height: 0.15em !important;}
 
+
 ul li{
 	width: 10cm;
 	margin-left: -0.35cm !important;
@@ -93,17 +94,18 @@ ol.numbered li{
 	padding-left: 0.3em !important;
 }
 
+
 @page {
   size: 5.5in 8.5in;
   /*half US Letter - will use cm in the rest of the file though*/
   counter-increment: page;
-  font-family: sans-serif; /* will be used in the page bottom */
+  font-family: 'News Cycle', sans-serif; /* will be used in the page bottom */
 }
 
 @page :left {
   margin-left: 2.3cm;
   margin-right: 1.25cm;
-  font-size: 9pt;
+  font-size: 7pt;
   
  @bottom-right{
     margin: 0;
@@ -118,9 +120,9 @@ ol.numbered li{
 }
 
 @page :right {
-  margin-left: 2.0cm;
-  margin-right: 2.00cm;
-  font-size: 9pt; 
+  margin-left: 1.8cm;
+  margin-right: 1.8cm;
+  font-size: 7pt; 
   
   @bottom-left{
     margin: 0;
