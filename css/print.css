@@ -9,6 +9,11 @@ a{color: black !important;}
 
 a{color: black !important;}
 
+.footnotes{
+	display:block;
+	page-break-inside:avoid;
+}
+
 .frontcover h1{
 	font-size: 16pt !important;
 }
@@ -17,14 +22,8 @@ a{color: black !important;}
 	page-break-after:always !important;
 }
 
-.footnotes{
-	display:block;
-	page-break-inside:avoid;
-}
-
 nav.index{
-	font-size: 10pt;
-	/*  trying to find a way to target different tags inside this div. issue: some css properties are changeable - for example, font-family and color - others are not - for example, font-size. (?!) */
+	page-break-after:always;	
 }
 
 nav.index ul li a{

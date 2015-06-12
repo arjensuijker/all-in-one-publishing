@@ -7,6 +7,12 @@
 	
 body{margin: 0 !important;}
 	
+
+
+nav.index{
+	page-break-after:never !important;	
+}
+	
 nav.index ul{
 	position: absolute; 
 	bottom: 0;
