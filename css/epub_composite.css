@@ -174,17 +174,28 @@ body {
   font-size: 16pt; 
 	font-weight:normal;
 	margin:10mm;
-}/* for this print stylesheet, we assume that most people print on a4 */
+}
+
+p:not(:first-of-type):not(.no-indent){
+	text-indent: 0 !important;
+}
+
+/* for this print stylesheet, we assume that most people print on a4 */
 
 
 body {
-  font-size: 10pt; /*will be used in the main content */ 
 	font-weight:normal;
-	margin:30mm;
+	margin:15mm;
+	font-size: 10pt;
 }
 a{color: black !important;}
 
 a{color: black !important;}
+
+.footnotes{
+	display:block;
+	page-break-inside:avoid;
+}
 
 .frontcover h1{
 	font-size: 16pt !important;
@@ -194,14 +205,8 @@ a{color: black !important;}
 	page-break-after:always !important;
 }
 
-.footnotes{
-	display:block;
-	page-break-inside:avoid;
-}
-
 nav.index{
-	font-size: 10pt;
-	/*  trying to find a way to target different tags inside this div. issue: some css properties are changeable - for example, font-family and color - others are not - for example, font-size. (?!) */
+	page-break-after:always;	
 }
 
 nav.index ul li a{
@@ -217,7 +222,7 @@ nav.index .essay-link .number {
 }
 
 nav.index ul li a.page-number{
- 	content:'page ' target-counter(attr(href), page);
+ 	content:'page ' target-counter(attr(href), page); /* retrieves the page numbers to be displayed in the index */
  	color: black !important;
 }
 
@@ -277,6 +282,7 @@ section header h2.subtitle{
 }
 
 h1, h2, h3, h4, h5 {
+  page-break-after: avoid;
 }
 
 p{
@@ -302,6 +308,8 @@ div.footnotes ol, ol li{
 	padding-left:1em;
 	word-wrap: break-word; /*to wrap long URL's */
 }
+
+div.footnotes ol li{ font-size: 1.2em !important; }
 
 ol.numbered li{
 	list-style-type: decimal !important;
@@ -355,6 +363,10 @@ table{
   page: cover; 
   width: 100%;
   height: 100%; 
+}
+
+.frontcover img{
+  margin-top: 1.7cm; /* does not make sense, should be 3.9cm... was defined by trial and error! :/  */
 }
 
 section.figures ol li{

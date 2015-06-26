@@ -4,3 +4,7 @@ body {
 	font-weight:normal;
 	margin:10mm;
 }
+
+p:not(:first-of-type):not(.no-indent){
+	text-indent: 0 !important;
+}
