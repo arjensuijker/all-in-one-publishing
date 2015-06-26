@@ -77,8 +77,10 @@ section header h2.author{
 } 
 
 .footnotes{
-	display:none;
+	/*display:none;*/
 }
+
+.footnotes ul li{list-style:none;}
 
 .footnote-tooltip{
 	display:block;
