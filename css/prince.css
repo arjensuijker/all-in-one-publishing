@@ -10,8 +10,6 @@ body{
 	font-size:10pt !important;
 }
 	
-
-
 nav.index{
 	page-break-after:never !important;	
 }
@@ -85,6 +83,13 @@ section h4{font-size: 108%;}
 ul li{
 	width: 10cm;
 	margin-left: -0.35cm !important;
+}
+
+.footnotes ul li{
+	list-style: none !important;
+	width: 3.2cm;
+	/*margin-left: -0.15cm !important;*/
+	padding-left: 1.6em !important;
 }
 
 section.figures ol li{
